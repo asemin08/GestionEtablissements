@@ -4,12 +4,13 @@ import eu.ensup.gestionetablissement.business.Course;
 import eu.ensup.gestionetablissement.dao.CourseDao;
 import eu.ensup.gestionetablissement.dao.ExceptionDao;
 import eu.ensup.gestionetablissement.dao.ICourseDao;
-import eu.ensup.gestionetablissement.dto.CourseDTO;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
-import org.mockito.*;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,10 +19,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Allan
  */
 @RunWith(MockitoJUnitRunner.class)
-public class CourseServiceTestMockSpy {
+public class CourseServiceTestMockSpy2 {
 
     @Spy
-    ICourseDao dao;
+    CourseDao dao;
 
 
 //    @BeforeEach
@@ -34,8 +35,10 @@ public class CourseServiceTestMockSpy {
 
         String courseSubject = "Java";
 
-        Mockito.doReturn(new Course("Java",9,88)).when(dao).get(88);
+//        Mockito.doReturn(new Course("Java",9,88)).when(dao).get(88);
 
+        var c1 = dao.getAll();
+        System.out.println(c1);
         Course course = dao.get(88);
 
         assertEquals(course.getCourseSubject(), courseSubject);

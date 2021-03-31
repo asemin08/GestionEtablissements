@@ -67,7 +67,6 @@ public class CourseDao implements ICourseDao
 		return allCourse;
 	}
 
-	@Override
 	public Course get( int index )  throws ExceptionDao
 	{
 		String methodName = new Object(){}.getClass().getEnclosingMethod().getName();
@@ -85,11 +84,13 @@ public class CourseDao implements ICourseDao
 				DaoLogger.logDaoError(className, methodName,"Echec de récupération d'information concernant le cours. Ce dernier n'existe pas en base de donnée.");
 				throw  new ExceptionDao("Le cours n'existe pas dans la base de donnée.");
 			}
-			while( res.next() )
-				cours = new Course(res.getString("coursesubject"),res.getFloat("nbhours"),res.getInt("id"));
+			else
+			{
+				cours = new Course(res.getString("coursesubject"), res.getFloat("nbhours"), res.getInt("id"));
 
-			// TODO:  Add logger failed and successfull
-			DaoLogger.logDaoInfo(className, methodName,"Les information du cours " + res.getString("coursesubject") +" "+res.getFloat("nbhours") + "  ont été récupérer de la base de donnée.");
+				// TODO:  Add logger failed and successfull
+				DaoLogger.logDaoInfo(className, methodName, "Les information du cours " + res.getString("coursesubject") + " " + res.getFloat("nbhours") + "  ont été récupérer de la base de donnée.");
+			}
 		}
 		catch (SQLException e) {
 

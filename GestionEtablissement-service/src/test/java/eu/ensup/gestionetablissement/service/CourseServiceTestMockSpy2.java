@@ -4,6 +4,7 @@ import eu.ensup.gestionetablissement.business.Course;
 import eu.ensup.gestionetablissement.dao.CourseDao;
 import eu.ensup.gestionetablissement.dao.ExceptionDao;
 import eu.ensup.gestionetablissement.dao.ICourseDao;
+import eu.ensup.gestionetablissement.dto.CourseDTO;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CourseServiceTestMockSpy2 {
 
     @Spy
-    CourseDao dao;
+    CourseService service;
 
 
 //    @BeforeEach
@@ -37,18 +38,18 @@ public class CourseServiceTestMockSpy2 {
 
 //        Mockito.doReturn(new Course("Java",9,88)).when(dao).get(88);
 
-        var c1 = dao.getAll();
+        var c1 = service.getAll();
         System.out.println(c1);
-        Course course = dao.get(88);
+        CourseDTO course = service.get(88);
 
         assertEquals(course.getCourseSubject(), courseSubject);
 
-        Mockito.verify(dao, Mockito.times(1)).get(88);
+        Mockito.verify(service, Mockito.times(1)).get(88);
     }
 
     @AfterEach
     public void afterEach()
     {
-        dao = null;
+        service = null;
     }
 }

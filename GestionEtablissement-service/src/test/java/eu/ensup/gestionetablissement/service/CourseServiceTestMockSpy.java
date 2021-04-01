@@ -1,21 +1,13 @@
 package eu.ensup.gestionetablissement.service;
 
-import eu.ensup.gestionetablissement.business.Course;
-import eu.ensup.gestionetablissement.dao.CourseDao;
 import eu.ensup.gestionetablissement.dao.ExceptionDao;
-import eu.ensup.gestionetablissement.dao.ICourseDao;
 import eu.ensup.gestionetablissement.dto.CourseDTO;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,10 +15,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Allan
  */
 @RunWith(MockitoJUnitRunner.class)
-public class CourseServiceTestMockSpy2 {
+public class CourseServiceTestMockSpy {
 
     @Spy
-    ICourseService service;
+    CourseService service;
 
 
 //    @BeforeEach
@@ -38,17 +30,15 @@ public class CourseServiceTestMockSpy2 {
     public void getCourseTest() throws ExceptionDao, ExceptionService {
 
         String courseSubject = "Java";
-        ArrayList cours = new ArrayList();
-        cours.add( new Course("Java",9,88));
-        cours.add( new Course( "SVT", 2,86));
 
+//        Mockito.doReturn(new Course("Java",9,88)).when(dao).get(88);
 
-        Mockito.doReturn(cours).when(service).getAll();
+        var c1 = service.getAll();
+        CourseDTO course = service.get(88);
 
-        List c1 = service.getAll();
-        assertEquals(c1.get(0), cours.get(0));
+        assertEquals(course.getCourseSubject(), courseSubject);
 
-        Mockito.verify(service, Mockito.times(1)).getAll();
+        Mockito.verify(service, Mockito.times(1)).get(88);
     }
 
     @AfterEach

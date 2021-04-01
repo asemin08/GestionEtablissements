@@ -23,6 +23,6 @@ public class LoggerDao extends LoggerHandler {
     }
 
     public void logDaoInfo(String className, String methodName, String message) {
-        Logger.getLogger(IDao.class.getPackageName()).error("DAO Info: "+ className + " " + methodName + " - " + message);
+        Logger.getLogger(IDao.class.getPackageName()).info("DAO Info: "+ className + " " + methodName + " - " + message);
     }
 }

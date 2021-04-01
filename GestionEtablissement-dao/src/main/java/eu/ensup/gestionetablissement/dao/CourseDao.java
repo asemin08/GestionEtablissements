@@ -38,7 +38,7 @@ public class CourseDao implements ICourseDao
 			// TODO:  Add logger failed and successfull
 			if(allCourse.isEmpty())
 			{
-				DaoLogger.logDaoError(className, methodName,"Echec de récupération d'information concernant tous les Curs.");
+				DaoLogger.logDaoError(className, methodName,"Echec de récupération d'information concernant tous les Cours.");
 			}
 
 			DaoLogger.logDaoInfo(className, methodName,"La récupération des informations concernant tous les cours a réussie.");

@@ -7,14 +7,27 @@ Une base de données est fournie donc utiliser les identifiants de connexions fo
 Lors de la navigation sur le site le retour en arrière ce fais par le click sur le tire de la page
 
 
- ### Pré-requis
+### Pré-requis
  
     1. Utiliser une java jdk 15 pour le projet
     2. Avoir Maven d'installer
     3. Avoir un serveur tomcat prêt à être utiliser 
- 
+    4. Avoir un serveur de base de données mysql
+    5. Récupérer le projet en effectuant un git clone -b web + lien du projet
     
 ---
+### Base de données
+    
+    1. Ouvrir un terminal est connecter vous a votre base de données. (Si phpmyadmin est installé rendez vous dessus et connecter vous).
+    2. Créer une base données pour le projet (par exemple: GestionEtablissement)
+    3. Importer le fichier Gestion.sql (présent dans le dossier livrable) dans la base de données qui vient d'étre créer
+     3.1 Sous phpmyadmin : aller dans l'onglet importer puis importer le fichier GestionEtablissement/livrable/GestionEtablissement.sql
+     3.2 En terminal: importer le script GestionEtablissement/livrable/GestionEtablissement.sql en exécutant la commande : 
+         * sous linux : mysql nom_base_de_donnees < GestionEtablissement/livrable/GestionEtablissement.sql
+         * sous windows: mysql -u[utilisateur] -p [nom_base_de_donnees] < GestionEtablissement/livrable/GestionEtablissement.sql
+    4. Effectuer la requête suivante pour vérifier que la base a bien été configurer (Deux valeur doit être renvoyer une personne directeur et une autre manager)
+         Select * from Person; 
+
 ### Partie WEB 
 
     1. Aller a la racine du projet 
@@ -41,7 +54,7 @@ Lors de la navigation sur le site le retour en arrière ce fais par le click sur
 * compte manager : id : manager , mdp : manager 
 
 
-###Fonctionnalité non-fini 
+### Fonctionnalité non-fini 
 
 * Statique commencer retourne un graph sous forme de photo (photo générer depuis la servlet statistique)
 * Manque du lien modification etudiant depuis la liste d"étudiants

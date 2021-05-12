@@ -13,7 +13,7 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
     2. Avoir Maven d'installer
     3. Avoir un serveur tomcat prêt à être utiliser 
     4. Avoir un serveur de base de données mysql
-    5. Récupérer le projet en effectuant un git clone -b web + lien du projet
+    5. Récupérer le projet en effectuant un git clone -b web https://github.com/asemin08/GestionEtablissements.git
     
 ---
 ### Base de données

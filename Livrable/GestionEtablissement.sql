@@ -1,3 +1,14 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
 -- Base de données : `GestionEtablissement`
 --
@@ -65,7 +76,8 @@ CREATE TABLE `Person` (
 
 INSERT INTO `Person` (`id`, `firstname`, `lastname`, `email`, `address`, `phone`, `role`, `password`, `dateofbirth`, `subjecttaught`, `average`) VALUES
 (1, 'directeur', 'directeur', 'directeur', 'directeur ', '0000000000', 1, 'directeur', '2020-01-23', NULL, NULL),
-(2, 'manager', 'manager', 'manager', 'manager', '0000000000', 2, 'manager', '2020-12-22', NULL, NULL),
+(2, 'manager', 'manager', 'manager', 'manager', '0000000000', 2, 'manager', '2020-12-22', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -80,6 +92,13 @@ CREATE TABLE `School` (
   `phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `director` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Déchargement des données de la table `School`
+--
+
+INSERT INTO `School` (`id`, `surname`, `email`, `address`, `phone`, `director`) VALUES
+(4, 'Ensup', 'ensup@gmail.com', '1 bis Avenue du 8 mai 1945', '0161380575', 1);
 
 --
 -- Index pour les tables déchargées
@@ -128,25 +147,25 @@ ALTER TABLE `School`
 -- AUTO_INCREMENT pour la table `Course`
 --
 ALTER TABLE `Course`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT pour la table `Mark`
 --
 ALTER TABLE `Mark`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT pour la table `Person`
 --
 ALTER TABLE `Person`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 
 --
 -- AUTO_INCREMENT pour la table `School`
 --
 ALTER TABLE `School`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Contraintes pour les tables déchargées

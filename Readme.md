@@ -4,7 +4,7 @@ Projet de gestion établissement web
 
 Une base de données est fournie donc utiliser les identifiants de connexions fournis ci-dessous pour vous connecter à l'application
 
-Lors de la navigation sur le site le retour en arrière ce fais par le click sur le tire de la page
+Lors de la navigation sur le site le retour en arrière ce fais par le clique sur le tire de la page
 
 
 ### Pré-requis
@@ -27,26 +27,39 @@ Lors de la navigation sur le site le retour en arrière ce fais par le click sur
          * sous windows: mysql -u[utilisateur] -p [nom_base_de_donnees] < GestionEtablissement/livrable/GestionEtablissement.sql
     4. Effectuer la requête suivante pour vérifier que la base a bien été configurer (Deux valeur doit être renvoyer une personne directeur et une autre manager)
          Select * from Person; 
+---
 
-### Partie WEB 
+### Préparation à la création du war 
 
-    1. Aller a la racine du projet 
-    2. Ce rendre dans le dossier présentation
-    3. Ouvrir un terminal depuis ce dossier
-    4. Executer la commande mvn clean package
-    5. Ouvrir un navigateur web 
-    7. Ce rendre sur le manager de tomcat http://votre_url/manager/html
-    8. Se connecter
-    9. Cherche la section "Fichier WAR à déployer"
-    10. Cliquer sur choisir un fichier
-    11. Depuis la pop up qui c'est ouvert ce rendre dans le dossier du projet puis dans GestionEtablissement-presentation puis dans target. 
-    12. Séléctionner le fichier .war GestionEtablissement-presentation-1.0.war présent
-    13. Cliquer sur ouvrier
-    14. Cliquer sur deployer
-    15. Attendre que le serveur tomcat deploy le war
-    16. Pour vérifier que le war est déployer regarder dans la section "Applications" si le war est présent
-    17. Ouvrir un nouveau naviagteur ou onglet et ce rendre sur http://votre_url/GestionEtablissement_presentation_war/
-    18. Normalement vous arriverais sur l'écran de login
+    1. Aller a la racine du projet GestionEtablissement
+    2. Ce rendre dans le dossier GestionEtablissement-dao/src/main/java/eu/ensup/gestionetablissement/dao
+    3. Ouvrir la classe Connect.java
+    4. Modifier les valeur pour votre serveur mysql : 
+      4.1 String URL = "jdbc:mysql://url-de-votre-base-de-donne/nom-de-la-base?serverTimezone=UTC"; Modifier avec le l'url + le nom de votre base de données.
+      4.2 String USERNAME = "identifiant"; Modifier avec votre identifiant de base de données.
+      4.3 String PASSWORD = "mot-de-passe";  Modifier avec votre mot de passe de base de données.
+
+---
+
+### Création du war 
+
+    6. Aller a la racine du projet 
+    7. Ce rendre dans le dossier présentation
+    8. Ouvrir un terminal depuis ce dossier
+    9. Executer la commande mvn clean package
+    10. Ouvrir un navigateur web 
+    11. Ce rendre sur le manager de tomcat http://votre_url/manager/html
+    12. Se connecter
+    13. Cherche la section "Fichier WAR à déployer"
+    14. Cliquer sur choisir un fichier
+    15. Depuis la pop up qui c'est ouvert ce rendre dans le dossier du projet puis dans GestionEtablissement-presentation puis dans target. 
+    16. Séléctionner le fichier .war GestionEtablissement-presentation-1.0.war présent
+    17. Cliquer sur ouvrier
+    18. Cliquer sur deployer
+    19. Attendre que le serveur tomcat deploy le war
+    20. Pour vérifier que le war est déployer regarder dans la section "Applications" si le war est présent
+    21. Ouvrir un nouveau naviagteur ou onglet et ce rendre sur http://votre_url/GestionEtablissement_presentation_war/
+    22. Normalement vous arriverais sur l'écran de login
 ---
 
 ### Informations de connexion

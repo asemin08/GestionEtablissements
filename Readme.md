@@ -20,8 +20,8 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
 1. Ouvrir un terminal et connecter vous a votre base de données. (Si phpmyadmin est installé rendez vous dessus et connecter vous).
 2. Créer une base données pour le projet (par exemple: GestionEtablissement)
 3. Importer le fichier Gestion.sql (présent dans le dossier livrable) dans la base de données qui vient d'étre créer 
-3.1. Sous phpmyadmin : aller dans l'onglet importer puis importer le fichier GestionEtablissement/livrable/GestionEtablissement.sql
-3.2. En terminal: importer le script GestionEtablissement/livrable/GestionEtablissement.sql en exécutant la commande : 
+      3.1. Sous phpmyadmin : aller dans l'onglet importer puis importer le fichier GestionEtablissement/livrable/GestionEtablissement.sql
+      3.2. En terminal: importer le script GestionEtablissement/livrable/GestionEtablissement.sql en exécutant la commande : 
          * sous linux : mysql nom_base_de_donnees < GestionEtablissement/livrable/GestionEtablissement.sql
          * sous windows: mysql -u[utilisateur] -p [nom_base_de_donnees] < GestionEtablissement/livrable/GestionEtablissement.sql
 4. Effectuer la requête suivante pour vérifier que la base a bien été configurer (Deux valeur doit être renvoyer une personne directeur et une autre manager)

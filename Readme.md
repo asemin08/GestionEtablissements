@@ -50,7 +50,7 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
     
 ## Installation avec l'administrateur tomcat :
 1. Ouvrir un navigateur web 
-2. Ce rendre sur le manager de tomcat http://votre_url/manager/html
+2. Ce rendre sur le manager de tomcat http://votre-url-tomcat/manager/html
 3. Se connecter
 4. Cherche la section "Fichier WAR à déployer"
 5. Cliquer sur choisir un fichier

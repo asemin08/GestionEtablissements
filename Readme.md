@@ -2,9 +2,9 @@
 
 Projet de gestion établissement web 
 
-Une base de données est fournie donc utiliser les identifiants de connexions fournis ci-dessous pour vous connecter à l'application
-
 Lors de la navigation sur le site le retour en arrière ce fais par le clique sur le tire de la page
+
+
 
 
 ### Pré-requis
@@ -82,9 +82,10 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
 
 ### Fonctionnalitées non-finit
 
-* Statique commencer retourne un graph sous forme de photo (photo générer depuis la servlet statistique)
-* Manque du lien modification etudiant depuis la liste d"étudiants
-
+* Statistique (chartjs) commencer retourne un bartchart + un pie chart sans les bonne valeurs correspondant au project
+* Manque du lien modification etudiant depuis la liste d'étudiants
+* Optimiser le fonctionnement de modifier un étudiant.
+---
 ### Test unitaire du projet
 
     1. Aller a la racine du projet

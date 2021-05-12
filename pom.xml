@@ -140,7 +140,7 @@
     <module>GestionEtablissement-dto</module>
     <module>GestionEtablissement-logger</module>
     <module>GestionEtablissement-mapper</module>
-    <module>GestionEtablissement-presentation</module>
     <module>GestionEtablissement-service</module>
+    <module>GestionEtablissement-presentation</module>
   </modules>
 </project>

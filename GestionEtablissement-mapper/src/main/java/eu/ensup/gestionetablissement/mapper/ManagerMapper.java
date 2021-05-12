@@ -15,7 +15,7 @@ public class ManagerMapper {
      */
     public static ManagerDTO businessToDto(Manager manager){
         ManagerDTO managerDTO = new ManagerDTO();
-        managerDTO.setFirstname(manager.getLastname());
+        managerDTO.setFirstname(manager.getFirstname());
         managerDTO.setLastname(manager.getLastname());
         managerDTO.setMailAddress(manager.getMailAddress());
         managerDTO.setAddress(manager.getAddress());

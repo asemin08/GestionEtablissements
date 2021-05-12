@@ -47,30 +47,40 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
     2. Ce rendre dans le dossier GestionEtablissement-presentation
     3. Ouvrir un terminal depuis ce dossier
     4. Executer la commande mvn clean package
-    5. Installation avec l'administrateur tomcat :
-    5.1. Ouvrir un navigateur web 
-    7. Ce rendre sur le manager de tomcat http://votre_url/manager/html
-    8. Se connecter
-    9. Cherche la section "Fichier WAR à déployer"
-    10. Cliquer sur choisir un fichier
-    11. Depuis la pop up qui c'est ouvert ce rendre dans le dossier du projet puis dans GestionEtablissement-presentation puis dans target. 
-    12. Séléctionner le fichier .war GestionEtablissement-presentation-1.0.war présent
-    13. Cliquer sur ouvrier
-    14. Cliquer sur deployer
-    15. Attendre que le serveur tomcat deploy le war
-    16. Pour vérifier que le war est déployer regarder dans la section "Applications" si le war est présent
-    17. Ouvrir un nouveau naviagteur ou onglet et ce rendre sur http://votre_url/GestionEtablissement_presentation_war/
-    18. Normalement vous arriverais sur l'écran de login
+    
+    
+    # Installation avec l'administrateur tomcat :
+    1. Ouvrir un navigateur web 
+    2. Ce rendre sur le manager de tomcat http://votre_url/manager/html
+    3. Se connecter
+    4. Cherche la section "Fichier WAR à déployer"
+    5. Cliquer sur choisir un fichier
+    6. Depuis la pop up qui c'est ouvert ce rendre dans le dossier du projet puis dans GestionEtablissement-presentation puis dans target. 
+    7. Séléctionner le fichier .war GestionEtablissement-presentation-1.0.war présent
+    8. Cliquer sur ouvrier
+    9. Cliquer sur deployer
+    10. Attendre que le serveur tomcat deploy le war
+    11. Pour vérifier que le war est déployer regarder dans la section "Applications" si le war est présent
+    12. Ouvrir un nouveau naviagteur ou onglet et ce rendre sur http://votre-url-tomcat/GestionEtablissement_presentation_war/
+    13. Normalement vous arriverais sur l'écran de login
+
+    # Installation manuel sur le serveur tomcat:
+    1. Ce rendre dans le dossier oû est installer le serveur tomcat
+    2. Copier le fichier .war présent dans GestionEtablissement/GestionEtablissement-presentation/target/GestionEtablissement-presentation-1.0.war dans le dossier webapps du serveur tomcat
+    3. Redémarer son serveur tomcat
+    4. Ouvrir un navigateur 
+    5. Ce rendre sur http://votre-url-tomcat/GestionEtablissement_presentation_war/
 ---
 
-### Informations de connexion
+### Informations de connexion à l'application
+
 * compte directeur : id : directeur , mdp : directeur 
 * compte manager : id : manager , mdp : manager 
+---
 
 
 
-
-### Fonctionnalité non-fini 
+### Fonctionnalitées non-finit
 
 * Statique commencer retourne un graph sous forme de photo (photo générer depuis la servlet statistique)
 * Manque du lien modification etudiant depuis la liste d"étudiants

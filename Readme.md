@@ -18,7 +18,7 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
 ---
 ### Base de données
     
-    1. Ouvrir un terminal est connecter vous a votre base de données. (Si phpmyadmin est installé rendez vous dessus et connecter vous).
+    1. Ouvrir un terminal et connecter vous a votre base de données. (Si phpmyadmin est installé rendez vous dessus et connecter vous).
     2. Créer une base données pour le projet (par exemple: GestionEtablissement)
     3. Importer le fichier Gestion.sql (présent dans le dossier livrable) dans la base de données qui vient d'étre créer
      3.1 Sous phpmyadmin : aller dans l'onglet importer puis importer le fichier GestionEtablissement/livrable/GestionEtablissement.sql

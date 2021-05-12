@@ -25,8 +25,7 @@ public class Connect
 		{
 			//Chargement du Driver
 			Class.forName(DRIVER);
-			//?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
-			
+
 			//Récuperation de la connection
 			if( URL != null && USERNAME != null && PASSWORD != null )
 				cn = DriverManager.getConnection(URL, USERNAME, PASSWORD);

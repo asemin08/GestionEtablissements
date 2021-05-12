@@ -65,79 +65,15 @@ public class StatistiqueServlet extends HttpServlet {
 
             // Etape 1 récu^érer les paramétres
             if (method == "get") {
+                
 //                Redirection vers l'écran de connexion
                 this.getServletContext().getRequestDispatcher("/public/Statistique.jsp").forward(req, resp);
 
             }
-//
+
         }
     }
 
-    private JFreeChart getHistoChart() {
-        JFreeChart histo = ChartFactory.createBarChart("Classement des étudiants par moyenne", "Moyenne", "Etudiant", createDataset(), PlotOrientation.VERTICAL, true, true,false);
-        histo.getPlot().setBackgroundPaint(new Color(39,55,70));
-        histo.setBackgroundPaint(new Color(39,55,70));
-        histo.getLegend().setBackgroundPaint(new Color(39,55,70));
-        histo.getTitle().setPaint(new Color(255,255,255));
-        CategoryPlot plot = histo.getCategoryPlot();
-
-        // Change Bar colors */
-        BarRenderer renderer = (BarRenderer) plot.getRenderer();
-
-        renderer.setSeriesPaint(0, new Color(217,83,79));
-        renderer.setSeriesPaint(1, new Color(240,173,78));
-        renderer.setSeriesPaint(2, new Color(92,184,92));
-        renderer.setSeriesPaint(3, new Color(2,117,216));
-        renderer.setDrawBarOutline(false);
-        renderer.setItemMargin(0);
-        renderer.setLegendTextPaint(0,new Color(255,255,255));
-        renderer.setLegendTextPaint(1,new Color(255,255,255));
-        renderer.setLegendTextPaint(2,new Color(255,255,255));
-        renderer.setLegendTextPaint(3,new Color(255,255,255));
-
-        plot.getDomainAxis().setLabelPaint(new Color(255,255,255));
-        plot.getRangeAxis().setLabelPaint(new Color(255,255,255));
-        plot.getDomainAxis().setTickLabelPaint(new Color(255,255,255));
-        plot.getRangeAxis().setTickLabelPaint(new Color(255,255,255));
-        plot.getRangeAxis().setStandardTickUnits(NumberAxis.createIntegerTickUnits());
-
-
-        return histo;
-    }
-
-
-
-    private DefaultCategoryDataset createDataset() {
-        int badStudent = 0;
-        int averageStudent = 0;
-        int goodStudent = 0;
-        int excellentStudent = 0;
-        //Add item in combobox student
-        PersonService ps = new PersonService();
-        try {
-            for(PersonDTO p : ps.getAll()){
-                if(p instanceof StudentDTO) {
-                    if(((StudentDTO) p).getAverage() < 8){
-                        badStudent++;
-                    }else if(((StudentDTO) p).getAverage() >= 8 && ((StudentDTO) p).getAverage() < 12){
-                        averageStudent++;
-                    }else if(((StudentDTO) p).getAverage() >= 12 && ((StudentDTO) p).getAverage() < 17){
-                        goodStudent++;
-                    }else if(((StudentDTO) p).getAverage() >= 17){
-                        excellentStudent++;
-                    }
-                }
-            }
-        } catch (ExceptionService es) {
-            JOptionPane.showMessageDialog(null, es.getMessage());
-        }
-        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        dataset.addValue(badStudent, "Etudiant mauvais (0 à 8)", "Etudiant mauvais (0 à 8)");
-        dataset.addValue(averageStudent, "Etudiant moyen (8 à 12)", "Etudiant moyen (8 à 12)");
-        dataset.addValue(goodStudent, "Etudiant bon (12 à 17)", "Etudiant bon (12 à 17)");
-        dataset.addValue(excellentStudent, "Etudiant excellent (17 à 20)", "Etudiant excellent (17 à 20)");
-        return dataset;
-    }
 
 
 }

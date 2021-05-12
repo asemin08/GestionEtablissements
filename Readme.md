@@ -85,6 +85,7 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
 * Statistique (chartjs) commencer retourne un bartchart + un pie chart sans les bonne valeurs correspondant au project
 * Manque du lien modification etudiant depuis la liste d'étudiants
 * Optimiser le fonctionnement de modifier un étudiant.
+* Optimiser la robustesse du projet et les message afficher
 ---
 ### Test unitaire du projet
 

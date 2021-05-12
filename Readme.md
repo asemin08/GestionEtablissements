@@ -67,6 +67,8 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
 * compte manager : id : manager , mdp : manager 
 
 
+
+
 ### Fonctionnalité non-fini 
 
 * Statique commencer retourne un graph sous forme de photo (photo générer depuis la servlet statistique)

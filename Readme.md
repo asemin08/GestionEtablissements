@@ -30,45 +30,45 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
 
 ### Préparation à la création du war 
 
-    1. Aller a la racine du projet GestionEtablissement
-    2. Ce rendre dans le dossier GestionEtablissement-dao/src/main/java/eu/ensup/gestionetablissement/dao
-    3. Ouvrir la classe Connect.java
-    4. Modifier les valeur pour votre serveur mysql : 
-      4.1 String URL = "jdbc:mysql://url-de-votre-base-de-donne/nom-de-la-base?serverTimezone=UTC"; Modifier avec le l'url + le nom de votre base de données.
-      4.2 String USERNAME = "identifiant"; Modifier avec votre identifiant de base de données.
-      4.3 String PASSWORD = "mot-de-passe";  Modifier avec votre mot de passe de base de données.
+1. Aller a la racine du projet GestionEtablissement
+2. Ce rendre dans le dossier GestionEtablissement-dao/src/main/java/eu/ensup/gestionetablissement/dao
+3. Ouvrir la classe Connect.java
+4. Modifier les valeur pour votre serveur mysql : 
+    1. String URL = "jdbc:mysql://url-de-votre-base-de-donne/nom-de-la-base?serverTimezone=UTC"; Modifier avec le l'url + le nom de votre base de données.
+    2. String USERNAME = "identifiant"; Modifier avec votre identifiant de base de données.
+    3. String PASSWORD = "mot-de-passe";  Modifier avec votre mot de passe de base de données.
 
 ---
 
 ### Création du war + deployment du war
 
-    1. Aller a la racine du projet GestionEtablissement
-    2. Ce rendre dans le dossier GestionEtablissement-presentation
-    3. Ouvrir un terminal depuis ce dossier
-    4. Executer la commande mvn clean package
+1. Aller a la racine du projet GestionEtablissement
+2. Ce rendre dans le dossier GestionEtablissement-presentation
+3. Ouvrir un terminal depuis ce dossier
+4. Executer la commande mvn clean package
     
     
-    # Installation avec l'administrateur tomcat :
-    1. Ouvrir un navigateur web 
-    2. Ce rendre sur le manager de tomcat http://votre_url/manager/html
-    3. Se connecter
-    4. Cherche la section "Fichier WAR à déployer"
-    5. Cliquer sur choisir un fichier
-    6. Depuis la pop up qui c'est ouvert ce rendre dans le dossier du projet puis dans GestionEtablissement-presentation puis dans target. 
-    7. Séléctionner le fichier .war GestionEtablissement-presentation-1.0.war présent
-    8. Cliquer sur ouvrier
-    9. Cliquer sur deployer
-    10. Attendre que le serveur tomcat deploy le war
-    11. Pour vérifier que le war est déployer regarder dans la section "Applications" si le war est présent
-    12. Ouvrir un nouveau naviagteur ou onglet et ce rendre sur http://votre-url-tomcat/GestionEtablissement_presentation_war/
-    13. Normalement vous arriverais sur l'écran de login
+# Installation avec l'administrateur tomcat :
+1. Ouvrir un navigateur web 
+2. Ce rendre sur le manager de tomcat http://votre_url/manager/html
+3. Se connecter
+4. Cherche la section "Fichier WAR à déployer"
+5. Cliquer sur choisir un fichier
+6. Depuis la pop up qui c'est ouvert ce rendre dans le dossier du projet puis dans GestionEtablissement-presentation puis dans target. 
+7. Séléctionner le fichier .war GestionEtablissement-presentation-1.0.war présent
+8. Cliquer sur ouvrier
+9. Cliquer sur deployer
+10. Attendre que le serveur tomcat deploy le war
+11. Pour vérifier que le war est déployer regarder dans la section "Applications" si le war est présent
+12. Ouvrir un nouveau naviagteur ou onglet et ce rendre sur http://votre-url-tomcat/GestionEtablissement_presentation_war/
+13. Normalement vous arriverais sur l'écran de login
 
-    # Installation manuel sur le serveur tomcat:
-    1. Ce rendre dans le dossier oû est installer le serveur tomcat
-    2. Copier le fichier .war présent dans GestionEtablissement/GestionEtablissement-presentation/target/GestionEtablissement-presentation-1.0.war dans le dossier webapps du serveur tomcat
-    3. Redémarer son serveur tomcat
-    4. Ouvrir un navigateur 
-    5. Ce rendre sur http://votre-url-tomcat/GestionEtablissement_presentation_war/
+# Installation manuel sur le serveur tomcat:
+1. Ce rendre dans le dossier oû est installer le serveur tomcat
+2. Copier le fichier .war présent dans GestionEtablissement/GestionEtablissement-presentation/target/GestionEtablissement-presentation-1.0.war dans le dossier webapps du serveur tomcat
+3. Redémarer son serveur tomcat
+4. Ouvrir un navigateur 
+5. Ce rendre sur http://votre-url-tomcat/GestionEtablissement_presentation_war/
 ---
 
 ### Informations de connexion à l'application
@@ -87,7 +87,6 @@ Lors de la navigation sur le site le retour en arrière ce fais par le clique su
 * Optimiser la robustesse du projet et les message afficher
 ---
 ### Test unitaire du projet
-
-    1. Aller a la racine du projet
-    2. Ouvrir un terminal depuis la racine du fichier
-    3. Exécuter la commande: mvn test
+1. Aller a la racine du projet
+2. Ouvrir un terminal depuis la racine du fichier
+3. Exécuter la commande: mvn test

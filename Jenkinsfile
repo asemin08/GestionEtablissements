@@ -5,6 +5,11 @@ pipeline {
 			steps {
 				echo 'Building..'
 				sh("mvn clean package")
+				post {
+                    success {
+                        junit '**/target/surefire-reports/*.xml'
+                    }
+                }
 			}
 		}
 		stage('Test') {

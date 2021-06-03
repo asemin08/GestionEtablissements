@@ -56,7 +56,7 @@
   <build>
       <resources>
         <resource>
-          <directory>../GestionEtablissement-logger/src/main/java/resources</directory>
+          <directory>src/main/resources</directory>
           <filtering>true</filtering>
         </resource>
       </resources>

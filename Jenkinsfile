@@ -1,5 +1,17 @@
 pipeline {
 	agent any
+    tools {
+    	maven 'maven'
+        jdk 'java-15'
+    }
+    stages {
+            stage ('Initialize') {
+                steps {
+                        echo "maven"
+                        echo "jdk"
+                }
+            }
+    }
 	stages {
 		stage('Build') {
 			steps {

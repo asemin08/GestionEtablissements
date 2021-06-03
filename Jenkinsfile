@@ -4,15 +4,14 @@ pipeline {
     	maven 'maven'
         jdk 'java-11'
     }
-    stages {
-            stage ('Initialize') {
-                steps {
-                        echo "maven"
-                        echo "jdk"
-                }
-            }
-    }
+
 	stages {
+	    stage ('Initialize') {
+            steps {
+                echo "maven"
+				echo "jdk"
+            }
+		}
 		stage('Build') {
 			steps {
 				echo 'Building..'

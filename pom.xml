@@ -136,8 +136,8 @@
   </build>
   <modules>
     <module>GestionEtablissement-business</module>
-    <module>GestionEtablissement-dao</module>
     <module>GestionEtablissement-dto</module>
+    <module>GestionEtablissement-dao</module>
     <module>GestionEtablissement-logger</module>
     <module>GestionEtablissement-mapper</module>
     <module>GestionEtablissement-service</module>

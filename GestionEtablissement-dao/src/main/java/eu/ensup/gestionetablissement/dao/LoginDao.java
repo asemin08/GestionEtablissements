@@ -71,7 +71,7 @@ public class LoginDao {
                 DaoLogger.logDaoInfo(className, methodName,"L'utilisateur " + mail +  " authentifié");
             } else {
                 DaoLogger.logDaoError(className, methodName,mail + " : Identifiant ou mot de passe incorrect.");
-                throw new ExceptionDao("Identifiant ou mot de passe incorrect.");
+                throw new ExceptionDao("Cette personne n'a pas l'autorisation pour accéder à l'application !");
             }
 
         } catch (SQLException throwables) {

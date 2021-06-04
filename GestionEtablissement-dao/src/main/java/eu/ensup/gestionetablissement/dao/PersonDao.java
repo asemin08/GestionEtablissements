@@ -116,7 +116,7 @@ public class PersonDao implements IDao<Person>
 
         } catch (SQLException e) {
             DaoLogger.logDaoError(className, methodName,"Problème d'ajout d'une personne à la base de donnée.",e);
-            throw new ExceptionDao("Impossible de créer l'utilisateur. Veuillez contacter votre administrateur.");
+            throw new ExceptionDao("L'utilisateur existe déjà !");
         }
         return res;
     }

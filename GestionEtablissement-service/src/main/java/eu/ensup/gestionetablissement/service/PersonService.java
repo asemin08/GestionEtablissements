@@ -252,4 +252,8 @@ public class PersonService implements IEntityService<PersonDTO> {
     	
     	return average;
     }
+
+
+    public void update(String prenom, String email, String addresse, String tel, String nom, String password, int i, String date) {
+    }
 }
